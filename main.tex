@@ -1,0 +1,125 @@
+% main settings
+\documentclass[12pt, a4paper, oneside]{book}
+\usepackage[a4paper, total={21cm,29.7cm}, top=1cm, bottom=1.5cm, left=2.25cm, right=2.25cm, headheight=2cm, headsep=1cm, includehead, includefoot]{geometry}
+\usepackage[default,scale=1]{opensans}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{csquotes}
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\selectlanguage{russian}
+
+% set resource
+\usepackage[backend=biber]{biblatex}
+\addbibresource{resources.bib}
+
+% set page
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyhead[LE,RO]{\textsl{\rightmark}}
+\fancyhead[LO,RO]{\leftmark\newline\nouppercase{\rightmark}}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\chapter}%
+  {\normalfont\bfseries\Huge}{\thechapter.}{20pt}{}
+\titlespacing{\chapter}{0pt}{0in}{18pt}
+
+%\title{BMI-Diploma}
+%\author{stoian2662 }
+%\date{April 2019}
+
+\begin{document}
+
+% set headers
+\renewcommand{\chaptertitlename}{Глава}
+\renewcommand{\contentsname}{Съдържание}
+\renewcommand{\listfigurename}{Фигури}
+\renewcommand{\listtablename}{Таблици}
+\renewcommand{\tablename}{Таблица}
+\renewcommand{\figurename}{Фиг.}
+
+% TITLE PAGE
+\begin{titlepage}
+    \centering
+	\begin{figure}
+	    \centering
+	    \includegraphics[width=4cm,keepaspectratio]{resources/su.jpg}\par\vspace{1cm}
+	\end{figure}
+	
+	\vspace{1cm}
+	
+    \centering
+    {\scshape\LARGE СОФИЙСКИ УНИВЕРСИТЕТ „СВ. КЛИМЕНТ ОХРИДСКИ“ \par}
+    %\justify
+    {\scshape\Large СПЕЦИАЛНОСТ „БИО- И МЕДИЦИНСКА ИНФОРМАТИКА” \par}
+	
+	\vspace{2cm}
+	
+	{\scshape\Large Дипломна работа \par}
+	{\scshape\Large на тема: \par}
+	\vspace{1cm}
+	{\scshape\LARGE Свързани биоинформатични данни \par}
+	{\scshape\Large Магистър \par}
+	\vspace{5cm}
+    {\scshape\Large изготвил: Стоян Хаджийски \\ фак. №: 25639 \par}
+
+	\vfill
+
+    % Bottom of the page
+	{\large Юни 2018\par}
+\end{titlepage}
+
+\tableofcontents
+
+\printbibliography[title={Ресурси}]
+
+\listoffigures
+
+\listoftables
+
+\chapter*{Увод}
+
+\\Data Integration in Bioinformatics: Current Efforts and Challenges
+
+С бързия напредък в технологиите за секвениране от следващо поколение (NGS) и бързо нарастващият обем биологични данни, са създадени разнообразие от източници на данни (бази данни) и уеб сървъри), за да улеснят управлението, достъпността и анализа им. Предпоставка за изследванията в областта на биоинформатиката са способността за намиране, маневриране и достъп до данни, депозирани в различни източници. За дадена биоинформативна задача, изследователите често трябва да бъдат умели в извличането на информация от тези източници на данни и в използването на извлечена информация за допълнителен анализ на данни / търсене на информация. \cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+Безспорно интеграцията на данни става досадна и отнема много време, особено по отношение на работата с огромни файлове на съвременни NGS и други данни. По този начин, интегриране на данни от разпределени, разнородни и обемни данни източниците се оказват значителна пречка за пълно използване на богатството от големи биологични данни (Davidson, et al., 1995; Stein, 2002).\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+Значението на интеграционния компонент на научните изследвания произтичащи от проучвания, базирани на високопроизводителни технологии (като NGS), са 2:
+\begin{itemize}
+    \item поради голямото ниво на автоматизация на действителните експериментални процедури, усилията на
+получаването на експерименталните данни отнема само около 20\% или по-малко от общите усилия за изследване през проект за NGS; приблизително четири пети от усилията отиват за интегриране и анализ на колекция от експериментални данни (Mardis, 2010);
+    \item отговорите на най-важните и сложни биологични въпроси днес рядко се предоставят директно чрез експерименталните резултати; за се стигне до потенциални отговори, биоинформатичният анализ често включва интегрирането на разнообразни данни от множество източници.
+\end{itemize}
+\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+\chapter*{Концепция}
+
+\chapter*{Литературен преглед}
+
+Тук се разглеждат и илюстрират няколко подхода, използвани за интеграция на данни. Разглеждат се експоненциално нарастващите данни за NGS, също така се описват предизвикателствата в този контекст и обсъждат потенциалните тенденции.\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+\chapter*{Цел}
+
+Целта на интегрирането на данни в биоинформатиката е да се създадат автоматизирани и ефективни начини за интеграция на големи, разнородни набори от биологични данни от множество източници. Тази цел обаче е доста трудна, защото източниците са географски разпределени и разнородни по отношение на техните функции, структури, методи за достъп и формати за разпространение.\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+Според актуализацията от 2010 г. в Bioinformatics Links Directory (Brazas, et al., 2010), има почти 1500 уникални публично достъпни източника на данни. Въз основа на своите функции източниците на данни могат да бъдат класифицирани в различни категории:
+
+\begin{itemize}
+    \item секвенционни бази данни - e.g., GenBank (Benson, et al., 2006), RefSeq (Pruitt, et al., 2009), CMR (Comprehensive Microbial Resource) (Davidsen, et al., 2010);
+    \item функционални геномни бази данни - ArrayExpress (Parkinson, et al., 2011), FFGED (Filamentous Fungal Gene Expression Database) (Zhang and Townsend, 2010), GEO (Gene Expression Omnibus) (Barrett, et al., 2011);
+    \item база данни за протеини и тяхното взаимодействие - BIND (Biomolecular Interaction Network Database) (Bader, et al., 2003), DIP (Database of Interacting Proteins) (Salwinski, et al., 2004), IntAct (Aranda, et al., 2010), MINT (Molecular Interactions Database) (Ceol, et al., 2010);
+    \item бази данни за метаболитни пътища - e.g., KEGG (Kyoto Encyclopedia of Genes and Genomes) (Kanehisa, et al., 2010);
+    \item за протеинови структури - CATH (Greene, et al., 2007), PDB (Protein Data Bank) (Rose, et al., 2011); (6) annotation databases, e.g., GO (Gene Ontology) (Ashburner, et al., 2000), NCBI Taxonomy (Sayers, et al., 2011)
+\end{itemize}
+
+Освен това източниците на данни се различават по достъпността и разпространението им. Те могат да бъдат класифицирани и по видове, представляващи интерес, като напр. нишковидни гъби (Zhang and Townsend, 2010), муха (Gilbert, 2007), мишка (Blake, et al., 2011).\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+Въпреки предизвикателствата, интегрирането на данни е много обещаващо: разнородни източници предоставят биологични данни, обхващащи широк спектър от изследователски области. Следователно интеграцията на данни има потенциал да улесни и подобри изваждането на изводи от биологичните изследвания. Въпреки че през последните две десетилетия бяха отделени усилия за интегриране на биологични данни, то остава предизвикателно и трудоемко.\cite{BIOINFORMATICS-TRENDS-AND-METHODOLOGIES}
+
+\end{document}
